@@ -44,6 +44,11 @@ class BankAccountTest {
     }
 
     @Test
+    void testGetAccountNumber(){
+        assertEquals("100", bankAccount.getAccountNumber());
+    }
+
+    @Test
     void createBankAccountWithoutDeposit(){
         BankAccount bankAccountWithoutInitialDeposit = new BankAccount("101","Jane Doe");
         assertEquals(0,bankAccountWithoutInitialDeposit.getAvailableBalance());
